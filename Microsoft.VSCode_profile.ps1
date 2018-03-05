@@ -28,6 +28,7 @@ function Connect-Skype {
     Import-PSSession $sfboSession
 }
 
+# Connect to Security and Compliance
 function Connect-SC {
     $o365Cred = Get-Credential
     $ccSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid/ -Credential $o365Cred -Authentication Basic -AllowRedirection
