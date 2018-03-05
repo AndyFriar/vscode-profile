@@ -19,3 +19,17 @@ function Connect-EO {
     $o365Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/ -Credential $o365Cred -Authentication Basic -AllowRedirection
     Import-PSSession $o365Session
 }
+
+# Connect to Skype
+function Connect-Skype {
+    $o365Cred = Get-Credential
+    Import-Module SkypeOnlineConnector
+    $sfboSession = New-CsOnlineSession -Credential $o365Cred
+    Import-PSSession $sfboSession
+}
+
+function Connect-SC {
+    $o365Cred = Get-Credential
+    $ccSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid/ -Credential $o365Cred -Authentication Basic -AllowRedirection
+    Import-PSSession $ccSession -Prefix cc
+}
