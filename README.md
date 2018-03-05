@@ -1,3 +1,3 @@
-# Visual Studio Code
+# Visual Studio Code Profile
 
-Contains the a modified profile to replicate functions to connect to Exchange Online / Sharepoint / Skype etc
+Contains a modified profile to replicate functions to connect to Exchange Online / Sharepoint / Skype etc
